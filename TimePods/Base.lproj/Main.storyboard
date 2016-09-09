@@ -17,18 +17,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPa-yY-1lx">
-                                <rect key="frame" x="251" y="142" width="70" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPa-yY-1lx">
+                                <rect key="frame" x="279" y="100" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbe-Vm-2Ia">
+                                <rect key="frame" x="283" y="300" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="buttonStartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zMK-yz-smr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QI9-oL-LQZ">
+                                <rect key="frame" x="279" y="200" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQS-1o-bfB">
+                                <rect key="frame" x="372" y="120" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rQS-1o-bfB" firstAttribute="leading" secondItem="hPa-yY-1lx" secondAttribute="trailing" constant="50" id="33L-Ok-m4Z"/>
+                            <constraint firstItem="hPa-yY-1lx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="J0m-6X-iee"/>
+                            <constraint firstItem="QI9-oL-LQZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="200" id="Q4T-T8-s62"/>
+                            <constraint firstItem="QI9-oL-LQZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Voc-Tg-Hpi"/>
+                            <constraint firstItem="rQS-1o-bfB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="gDu-Ln-5GM"/>
+                            <constraint firstItem="hPa-yY-1lx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kel-xF-Q2X"/>
+                            <constraint firstItem="Bbe-Vm-2Ia" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="300" id="pTQ-2Z-7GG"/>
+                            <constraint firstItem="Bbe-Vm-2Ia" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zav-rx-Lwc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonPause" destination="QI9-oL-LQZ" id="Xhh-sc-XFS"/>
+                        <outlet property="buttonStart" destination="Bbe-Vm-2Ia" id="eut-2Z-Ub0"/>
+                        <outlet property="labelTime" destination="rQS-1o-bfB" id="d6h-Jc-ChW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="284" y="295"/>
         </scene>
     </scenes>
 </document>
