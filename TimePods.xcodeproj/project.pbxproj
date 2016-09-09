@@ -12,6 +12,7 @@
 		141578801D8211BF00454F01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1415787E1D8211BF00454F01 /* Main.storyboard */; };
 		141578821D8211BF00454F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141578811D8211BF00454F01 /* Assets.xcassets */; };
 		141578851D8211BF00454F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141578831D8211BF00454F01 /* LaunchScreen.storyboard */; };
+		144359E31D836ACA00D72FB4 /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144359E21D836ACA00D72FB4 /* Pod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		141578811D8211BF00454F01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		141578841D8211BF00454F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		141578861D8211BF00454F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		144359E21D836ACA00D72FB4 /* Pod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				141578811D8211BF00454F01 /* Assets.xcassets */,
 				141578831D8211BF00454F01 /* LaunchScreen.storyboard */,
 				141578861D8211BF00454F01 /* Info.plist */,
+				144359E21D836ACA00D72FB4 /* Pod.swift */,
 			);
 			path = TimePods;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144359E31D836ACA00D72FB4 /* Pod.swift in Sources */,
 				1415787D1D8211BF00454F01 /* ViewController.swift in Sources */,
 				1415787B1D8211BF00454F01 /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +290,7 @@
 				1415788B1D8211BF00454F01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
