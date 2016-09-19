@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonStart: UIButton!   //the test start button
     @IBOutlet weak var buttonPause: UIButton!   //the test pause button
     
-    var timer = NSTimer()
+    var timer = Timer()
     var date = NSDate()
     var testPod = Pod(name: "jump rope", duration: 10)
     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonStartPressed(sender: UIButton) {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(updateTick), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTick), userInfo: nil, repeats: true)
     }
 }
 
