@@ -8,19 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+
     //MARK: Properties
-    @IBOutlet weak var labelTime: UILabel!
-    @IBOutlet weak var buttonStart: UIButton!   //the test start button
-    @IBOutlet weak var buttonPause: UIButton!   //the test pause button
-    
+    @IBOutlet weak var tableView: UITableView!
     var timer = Timer()
     var date = NSDate()
     var testPod = Pod(name: "jump rope", duration: 10)
     
+    let textCellIdentifier = "TimePodTableViewCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
+        //tableView.register(TimePodTableViewCell.self, forCellReuseIdentifier: "TimePodTableViewCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,20 +36,54 @@ class ViewController: UIViewController {
         deducting time from the the active TimePod and all necessary logic
         associated with it.
     */
-    func updateTick() {
-        labelTime.text = String(testPod.duration)
-        
-        if (testPod.duration > 0) {
-            testPod.duration -= 1
-        } else {
-            //yay the timer is over logic goes here
-            labelTime.text = "Complete!"
-            //TODO: set the TimePod to disabled / completed state
-        }
-    }
 
+    /*
     @IBAction func buttonStartPressed(sender: UIButton) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTick), userInfo: nil, repeats: true)
+    }*/
+    
+    // MARK: Protocol required methods
+
+    
+    // MARK: UITableViewSource functions
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    // UITextField Delegates
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("TextField did begin editing method called")
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("TextField did end editing method called")
+    }
+    
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("TextField should begin editing method called")
+        return true;
+    }
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print("TextField should clear method called")
+        return true;
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print("TextField should snd editing method called")
+        return true;
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("While entering the characters this method gets called")
+        return true;
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("TextField should return method called")
+        return true;
     }
 }
 
