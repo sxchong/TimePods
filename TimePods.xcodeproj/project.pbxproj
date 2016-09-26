@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141081501D91EBC200304BEF /* TimePodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410814F1D91EBC200304BEF /* TimePodTableViewCell.swift */; };
 		1415787B1D8211BF00454F01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1415787A1D8211BF00454F01 /* AppDelegate.swift */; };
 		1415787D1D8211BF00454F01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1415787C1D8211BF00454F01 /* ViewController.swift */; };
 		141578801D8211BF00454F01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1415787E1D8211BF00454F01 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1410814F1D91EBC200304BEF /* TimePodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePodTableViewCell.swift; sourceTree = "<group>"; };
 		141578771D8211BF00454F01 /* TimePods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimePods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1415787A1D8211BF00454F01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1415787C1D8211BF00454F01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		141578791D8211BF00454F01 /* TimePods */ = {
 			isa = PBXGroup;
 			children = (
+				1410814F1D91EBC200304BEF /* TimePodTableViewCell.swift */,
 				1415787A1D8211BF00454F01 /* AppDelegate.swift */,
 				1415787C1D8211BF00454F01 /* ViewController.swift */,
 				1415787E1D8211BF00454F01 /* Main.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				144359E31D836ACA00D72FB4 /* Pod.swift in Sources */,
 				1415787D1D8211BF00454F01 /* ViewController.swift in Sources */,
+				141081501D91EBC200304BEF /* TimePodTableViewCell.swift in Sources */,
 				1415787B1D8211BF00454F01 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
